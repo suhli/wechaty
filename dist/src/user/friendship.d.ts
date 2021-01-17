@@ -20,7 +20,7 @@
  */
 import { EventEmitter } from 'events';
 import { Wechaty } from '../wechaty';
-import { FriendshipPayload, FriendshipType, FriendshipSearchQueryFilter } from 'wechaty-puppet';
+import { FriendshipPayload, FriendshipType, FriendshipSearchQueryFilter, FriendshipSource } from 'wechaty-puppet';
 import { Acceptable } from '../types';
 import { Contact } from './contact';
 /**
@@ -182,6 +182,7 @@ declare class Friendship extends EventEmitter implements Acceptable {
      * .start()
      */
     type(): FriendshipType;
+    source(): FriendshipSource | null;
     /**
      * get friendShipPayload Json
      * @returns {FriendshipPayload}

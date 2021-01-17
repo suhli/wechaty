@@ -266,6 +266,9 @@ class Friendship extends events_1.EventEmitter {
             ? this.payload.type
             : wechaty_puppet_1.FriendshipType.Unknown;
     }
+    source() {
+        return this.payload.source || null;
+    }
     /**
      * get friendShipPayload Json
      * @returns {FriendshipPayload}
